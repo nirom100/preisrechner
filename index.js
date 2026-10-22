@@ -35,8 +35,8 @@ function delivery() {
     alert(
       "Bestellung für Lieferung abgeschlossen! Gesamtbetrag: " + total + " €",
     );
+    resetSum();
   }
-  resetSum();
 }
 
 function addItemToList(item, price) {
@@ -44,6 +44,7 @@ function addItemToList(item, price) {
   const p = document.createElement("p");
   p.textContent = item + " - " + price + " €";
   list.appendChild(p);
+  list.scrollTo({ top: list.scrollHeight, behavior: "smooth" });
 }
 
 function updateSumView(sum) {
