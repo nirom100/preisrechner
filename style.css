@@ -15,10 +15,6 @@
   --accent-teal_muted: #5583a2;
 
   --font-body: Helvetica, sans-serif;
-
-  --nav-size: 0.8rem;
-  --body-size: 1rem;
-  --section-heading-size: 1.5rem;
 }
 
 body {
@@ -43,11 +39,14 @@ body {
 .order-container {
   background-color: #ffffff;
   padding: 20px;
-  position: relative;
-  width: auto;
-  height: auto;
   box-shadow: 0 5px 25px rgba(2, 2, 2, 0.25);
   border-radius: 10px;
+}
+
+.order-container {
+  contain: size;
+  display: flex;
+  flex-direction: column;
 }
 
 .items {
@@ -90,6 +89,10 @@ body {
 .checkout {
   display: flex;
   justify-content: space-between;
+}
+
+.total {
+  font-weight: 800;
 }
 
 .checkout-buttons {
@@ -135,4 +138,15 @@ body {
 
 .btn-delivery:hover {
   background-color: var(--accent-teal_muted);
+}
+
+#order-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+#order-list > p {
+  padding: 1rem 0;
+  border-bottom: solid 1px rgb(213, 213, 213);
 }

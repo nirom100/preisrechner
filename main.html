@@ -95,22 +95,27 @@
         <div class="checkout-container">
           <div class="checkout">
             <h3>Gesamt</h3>
-            <p class="total">0,00 €</p>
+            <p class="total" id="totalsum">0,00 €</p>
           </div>
           <div class="checkout-buttons">
-            <button class="btn btn-reset">Zurücksetzen</button>
+            <button class="btn btn-reset" onclick="resetSum()">
+              Zurücksetzen
+            </button>
             <div class="order-buttons">
-              <button class="btn btn-inhouse">Vor Ort</button>
-              <button class="btn btn-delivery">Lieferung</button>
+              <button class="btn btn-inhouse" onclick="inHouse()">
+                Vor Ort
+              </button>
+              <button class="btn btn-delivery" onclick="delivery()">
+                Lieferung
+              </button>
             </div>
           </div>
         </div>
       </div>
 
       <div class="order-container">
-        <div class="bestellung-card-container">
-          <h1>Bestellung</h1>
-        </div>
+        <h1>Bestellung</h1>
+        <div id="order-list"></div>
       </div>
     </main>
     <script src="index.js"></script>
